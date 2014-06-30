@@ -17,6 +17,13 @@ $menu += [
 
 $presidente = false;
 
+/* Funzione riservata a determinate regioni */
+$regione = false;
+
+if($me->appartenenzaAttuale()->comitato()->regionale()=='1'){
+    $regione = true;
+}
+
 if ( $me && ($me->admin() || $me->delegazioneAttuale()->applicazione == APP_PRESIDENTE )) {
     $presidente = true;
     $menu[''] += [
@@ -55,6 +62,12 @@ if ( $presidente || $me->delegazioni(APP_FORMAZIONE) || $me->corsiBaseDiGestione
 if ( $presidente || ($me && $me->delegazioneAttuale()->applicazione == APP_OBIETTIVO)) {
     $menu[''] += [
         'obiettivo.dash'   =>  '<span class="badge badge-success">&nbsp;</span> Delegato d\'Area'
+    ];
+}
+
+if ( $regione && $presidente || ($me && $regione && $me->delegazioneAttuale()->applicazione == APP_FARMACIA)) {
+    $menu[''] += [
+        'farmacia.dash'   =>  '<span class="badge badge-success">&nbsp;</span> Farmacia'
     ];
 }
 

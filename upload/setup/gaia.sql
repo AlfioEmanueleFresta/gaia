@@ -317,6 +317,18 @@ CREATE TABLE IF NOT EXISTS `estensioni` (
   KEY `volontario` (`volontario`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+CREATE TABLE IF NOT EXISTS `farmaci` (
+  `id` int(11) NOT NULL,
+  `tipo` varchar(16) DEFAULT NULL,
+  `cConferma` varchar(16) DEFAULT NULL,
+  `tConferma` varchar(64) DEFAULT NULL,
+  `nome` text,
+  `pAttivo` text,
+  `timestamp` varchar(64) DEFAULT NULL,
+  `barcode` int(64) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
 CREATE TABLE IF NOT EXISTS `file` (
   `id` varchar(64) NOT NULL,
   `creazione` varchar(64) DEFAULT NULL,

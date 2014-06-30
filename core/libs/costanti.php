@@ -262,6 +262,7 @@ define('APP_CO',            50);
 define('APP_SOCI',          60);
 define('APP_PATENTI',       70);
 define('APP_FORMAZIONE',    80);
+define('APP_FARMACIA',      90);
 
 $conf['applicazioni'] = [
     APP_ATTIVITA    =>  "Attività",
@@ -270,8 +271,9 @@ $conf['applicazioni'] = [
     APP_OBIETTIVO   =>  "Obiettivo strategico",
     APP_CO          =>  "Centrale Operativa",
     APP_SOCI        =>  "Ufficio Soci",
-    APP_PATENTI     => "Ufficio Patenti",
-    APP_FORMAZIONE  => "Resp. Formazione"
+    APP_PATENTI     =>  "Ufficio Patenti",
+    APP_FORMAZIONE  =>  "Resp. Formazione",
+    APP_FARMACIA    =>  "Farmacia"
 ];
 
 /*
@@ -688,3 +690,21 @@ $conf['partecipazioneBase'] = [
 
 define('POSTA_INGRESSO',        0);
 define('POSTA_USCITA',          1);
+
+/*
+ * ===================================
+ * ===== TIPOLOGIA FARMACI ===========
+ * ===================================
+ */
+
+define('FAR_CPR',       0);
+define('FAR_FIALE',    10);
+define('FAR_SUPPOSTE', 20);
+define('FAR_BUSTINE',  30);
+
+$conf['farmaci'] = [
+    FAR_CPR        =>  'Compresse', 
+    FAR_FIALE      =>  'Fiale', 
+    FAR_SUPPOSTE   =>  'Supposte', 
+    FAR_BUSTINE    =>  'Bustine'
+];  
