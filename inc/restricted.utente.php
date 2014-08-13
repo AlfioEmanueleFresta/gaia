@@ -240,6 +240,7 @@ $t = TitoloPersonale::filtra([['volontario',$u]]);
                         <?php } ?>
                     </td>
                 </tr>
+<<<<<<< HEAD
                 <?php } ?>     
             </table>
         </div>
@@ -250,6 +251,16 @@ $t = TitoloPersonale::filtra([['volontario',$u]]);
             <h4><i class="icon-list muted"></i> Curriculum </h4>
             <table class="table table-striped">
                 <?php foreach ( $t as $titolo ) { ?>
+=======
+            <?php } ?>     
+        </table>
+    </div>
+    <?php } ?>
+    <div class="span6">
+        <h4><i class="icon-list muted"></i> Curriculum </h4>
+        <table class="table table-striped">
+            <?php foreach ( $t as $titolo ) { ?>
+>>>>>>> master
                 <tr <?php if (!$titolo->tConferma) { ?>class="warning"<?php } ?>>
                     <td>
                         <?php if ($titolo->tConferma) { ?>
@@ -290,7 +301,7 @@ $t = TitoloPersonale::filtra([['volontario',$u]]);
                 </tr>
                         <?php } ?>
             </table>
+
         </div>
     <?php } ?> 
-    </div>
 </div>
