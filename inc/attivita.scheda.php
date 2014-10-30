@@ -391,19 +391,19 @@ $(document).ready( function() {
                                                         ?>
                                                     </a>
                                                     <?php if( $me->delegazioni(APP_CO) && $a->modificabileDa($me) && $potere){ ?>
-                                                    <a class="btn btn-small" href="?p=attivita.poteri&v=<?= $v->id; ?>&turno=<?= $turno; ?>">
-                                                        <i class="icon-rocket" ></i> Conferisci poteri
-                                                    </a>
+                                                        <a class="btn btn-small" href="?p=attivita.poteri&v=<?= $v->id; ?>&turno=<?= $turno; ?>">
+                                                            <i class="icon-rocket" ></i> Conferisci poteri
+                                                        </a>
                                                     <?php } ?>
                                                     <?php if( $a->modificabileDa($me) && $turno->fine >= time() && $turno->inizio >= time() ){ ?>
-                                                    <a class="btn btn-small btn-danger" href="?p=attivita.modifica.volontario.rimuovi&v=<?= $v->id; ?>&turno=<?= $turno; ?>">
-                                                        <i class="icon-trash" ></i> Rimuovi volontario
-                                                    </a>
+                                                        <a class="btn btn-small btn-danger" href="?p=attivita.modifica.volontario.rimuovi&v=<?= $v->id; ?>&turno=<?= $turno; ?>">
+                                                            <i class="icon-trash" ></i> Rimuovi volontario
+                                                        </a>
                                                     <?php } ?>
-                                                    <?php if( $a->modificabileDa($me) && $apertura ){ ?>
-                                                    <a class="btn btn-small btn-danger" href="?p=attivita.modifica.volontario.assente&v=<?= $v->id; ?>&turno=<?= $turno; ?>">
-                                                        <i class="icon-remove" ></i> Volontario assente
-                                                    </a>
+                                                    <?php if( $turno->inizio >= time() && $a->modificabileDa($me) && $apertura ){ ?>
+                                                        <a class="btn btn-small btn-danger" href="?p=attivita.modifica.volontario.assente&v=<?= $v->id; ?>&turno=<?= $turno; ?>">
+                                                            <i class="icon-remove" ></i> Volontario assente
+                                                        </a>
                                                     <?php } ?>
                                                 </li>
                                                 <?php } ?>
