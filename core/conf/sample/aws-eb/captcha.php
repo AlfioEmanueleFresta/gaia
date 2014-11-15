@@ -13,8 +13,8 @@
  */
 
 $conf['sweetcaptcha'] = [
-	'SWEETCAPTCHA_APP_ID' 		=> 12345, // your application id (change me)
-	'SWEETCAPTCHA_KEY' 			=> 'asd', // your application key (change me)
-	'SWEETCAPTCHA_SECRET'		=> 'asd', // your application secret (change me)
+	'SWEETCAPTCHA_APP_ID' 		=> getenv('SWEETCAPTCHA_APP_ID'), // your application id (change me)
+	'SWEETCAPTCHA_KEY' 			=> getenv('SWEETCAPTCHA_KEY'), // your application key (change me)
+	'SWEETCAPTCHA_SECRET'		=> getenv('SWEETCAPTCHA_SECRET'), // your application secret (change me)
 	'SWEETCAPTCHA_PUBLIC_URL'	=> 'core/libs/sweetcaptcha.php' // public http url to this file
 ];

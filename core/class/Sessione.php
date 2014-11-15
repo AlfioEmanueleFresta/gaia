@@ -4,7 +4,8 @@
  * ©2012 Croce Rossa Italiana
  */
 
-class Sessione extends REntita {
+// TODO: Per ora, sessione sta su MySQL
+class Sessione extends Entita {
     
     
     public function __construct ( $id = null ) {

@@ -14,11 +14,11 @@
 /* Configurazione del database */
 $conf['database'] = [
  
-    'dns'   =>  'mysql:host=127.0.0.1;dbname=DATABASE_NAME',
-    'user'  =>  'DATABASE_USER',
-    'pass'  =>  'DATABASE_PASSWORD',
+    'dns'   =>  'mysql:host=' . getenv('RDS_HOSTNAME') . ';port=' . getenv('RDS_PORT') . ';dbname=' . getenv('RDS_DB_NAME'),
+    'user'  =>  getenv('RDS_USERNAME'),
+    'pass'  =>  getenv('RDS_PASSWORD'),
     
     /* Connessione persistente? */
-    'persistent'    =>  false
+    'persistent'    =>  true
  
 ];
