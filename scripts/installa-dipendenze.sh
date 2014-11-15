@@ -11,8 +11,7 @@ echo " | Se il sistema NON e' UBUNTU, questo programma fallira' |"
 echo " | In tal caso, USCIRE ORA premendo CTRL + C              |"
 echo " ----------------------------------------------------------"
 echo " "
-echo "Premere un tasto per continuare"
-read
+
 
 clear
 echo "Aggiunta dei repository in corso..."
